@@ -1,0 +1,28 @@
+-----------------------------------Machine learning algorithms practice----------------------------------------------------------------------------------
+
+-------- Ex 1 - Linear Regression
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+In this exercice, the linear regression is implemented 
+    * first for a one variable problem : Profit as target and population as the only input
+    * then to a multivariate problem : House price as the target to predict and size (feet square) & number of bedrooms as the two inputs variables.
+ 
+The solution uses the gradient descent algorithm to minimize the cost function J (Mean squared error) and the analytical method called the normal equation.
+
+the folder contains the following files :
+       - ex1.m - Octave/MATLAB script that steps you through the exercise
+       - ex1data1.txt - Dataset for linear regression with one variable
+       - ex1data2.txt - Dataset for linear regression with multiple variables
+       - computeCost.m - Function to compute the cost of linear regression
+       - gradientDescent.m - Function to run gradient descent
+       - featureNormalize.m - Function to normalize features
+       - normalEqn.m - Function to compute the normal equations
+
+The feature normalization is used only with the gradient descent
+
+
+
+
+-------- Ex 2 - Classification : Logistic Regression
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
