@@ -1,15 +1,21 @@
------------------------------------Machine learning algorithms practice----------------------------------------------------------------------------------
+--Machine learning algorithms practice (from Coursera "Machine Laerning" Course)-----------------------------------------------------------
 
--------- Ex 1 - Linear Regression
----------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-------- Ex 1 - Linear Regression ---------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------
 In this exercice, the linear regression is implemented 
-    * first for a one variable problem : Profit as target and population as the only input
-    * then to a multivariate problem : House price as the target to predict and size (feet square) & number of bedrooms as the two inputs variables.
- 
-The solution uses the gradient descent algorithm to minimize the cost function J (Mean squared error) and the analytical method called the normal equation.
+    * first for a one variable problem : 
+        To predict profits for a food truck. Suppose you are the CEO of a restaurant franchise and are considering different cities for 
+        opening a new outlet. The chain already has trucks in various cities and you have data for profits and populations from the cities.
+        You would like to use this data to help you select which city to expand to next
 
-the folder contains the following files :
+   * then to a multivariate problem : 
+        to predict the prices of houses. Suppose you are selling your house and you want to know what a good market price would be. 
+        One way to do this is to first collect information on recent houses sold and make a model of housingprices.
+ 
+The solutions uses the "Gradient descent' to minimize the cost function J (Mean squared error) and the analytical method called the
+'Normal equation'.
+
+The folder contains the following files :
        - ex1.m - Octave/MATLAB script that steps you through the exercise
        - ex1data1.txt - Dataset for linear regression with one variable
        - ex1data2.txt - Dataset for linear regression with multiple variables
@@ -18,11 +24,32 @@ the folder contains the following files :
        - featureNormalize.m - Function to normalize features
        - normalEqn.m - Function to compute the normal equations
 
-The feature normalization is used only with the gradient descent
+The feature normalization is used only with the gradient descent (not required in Normal equation)
 
 
+-------- Ex 2 - Classification : Logistic Regression ------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+In this exercise, the logistic regression is implemented and applyed to two different datasets. the advanced built-in function fminunc is used 
+to minimize the cost function J.
+  * The first dataset is scores of students on two exams for admission in a university. you will build a logistic regression model to predict 
+    whether a student gets admitted or not. You'll predict the probability that a student with score 45 on exam 1 and score 85 on exam 2 will be 
+    admitted.
+  * Then, you are given a dataset of two test results on microchips. From these two tests, you would like to determine whether the microchips 
+    should be accepted or rejected. The data points are not linearly separable. However, you would still like to use logistic regression to 
+    classify the data points.
+
+Files included in this exercise
+       - ex2.m - Octave/MATLAB script that steps you through the exercise
+       - ex2 reg.m - Octave/MATLAB script for the later parts of the exercise
+       - ex2data1.txt - Training set for the first half of the exercise
+       - ex2data2.txt - Training set for the second half of the exercise
+       - mapFeature.m - Function to generate polynomial features
+       - plotDecisionBoundary.m - Function to plot classifier’s decision boundary
+       - * plotData.m - Function to plot 2D classification data
+       - * sigmoid.m - Sigmoid Function
+       - * costFunction.m - Logistic Regression Cost Function
+       - * predict.m - Logistic Regression Prediction Function
+       - * costFunctionReg.m - Regularized Logistic Regression Cost
 
 
--------- Ex 2 - Classification : Logistic Regression
----------------------------------------------------------------------------------------------------------------------------------------------------------
 
