@@ -1,20 +1,20 @@
---Machine learning algorithms practice (from Coursera "Machine Laerning" Course)-----------------------------------------------------------
+-----------Machine learning algorithms practice (from Coursera "Machine Laerning" Course)------------|
+-----------------------------------------------------------------------------------------------------|
+                                                                                                     |
+-------- Ex 1 - Linear Regression -------------------------------------------------------------------|
+-----------------------------------------------------------------------------------------------------|
+In this exercice, the linear regression is implemented                                               |
+* first for a one variable problem :                                                                 |
+    To predict profits for a food truck. Suppose you are the CEO of a restaurant franchise           |
+    and are considering different cities for opening a new outlet. The chain already has 
+    trucks in various cities and you have data for profits and populations from the cities.
+    You would like to use this data to help you select which city to expand to next
 
--------- Ex 1 - Linear Regression ---------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------------------------------------------
-In this exercice, the linear regression is implemented 
-    * first for a one variable problem : 
-        To predict profits for a food truck. Suppose you are the CEO of a restaurant franchise and are considering different cities for 
-        opening a new outlet. The chain already has trucks in various cities and you have data for profits and populations from the cities.
-        You would like to use this data to help you select which city to expand to next
-
-   * then to a multivariate problem : 
-        to predict the prices of houses. Suppose you are selling your house and you want to know what a good market price would be. 
-        One way to do this is to first collect information on recent houses sold and make a model of housingprices.
+* then to a multivariate problem : 
+    to predict the prices of houses. Suppose you are selling your house and you want to know
+    what a good market price would be. One way to do this is to first collect information on
+    recent houses sold and make a model of housingprices.
  
-The solutions uses the "Gradient descent' to minimize the cost function J (Mean squared error) and the analytical method called the
-'Normal equation'.
-
 The folder contains the following files :
        - ex1.m - Octave/MATLAB script that steps you through the exercise
        - ex1data1.txt - Dataset for linear regression with one variable
@@ -25,18 +25,22 @@ The folder contains the following files :
        - normalEqn.m - Function to compute the normal equations
 
 The feature normalization is used only with the gradient descent (not required in Normal equation)
+The solutions uses the "Gradient descent' to minimize the cost function J (Mean squared error) 
+and the analytical method called the 'Normal equation'.
 
 
--------- Ex 2 - Classification : Logistic Regression ------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------------------------------
-In this exercise, the logistic regression is implemented and applyed to two different datasets. the advanced built-in function fminunc is used 
-to minimize the cost function J.
-  * The first dataset is scores of students on two exams for admission in a university. you will build a logistic regression model to predict 
-    whether a student gets admitted or not. You'll predict the probability that a student with score 45 on exam 1 and score 85 on exam 2 will be 
-    admitted.
-  * Then, you are given a dataset of two test results on microchips. From these two tests, you would like to determine whether the microchips 
-    should be accepted or rejected. The data points are not linearly separable. However, you would still like to use logistic regression to 
-    classify the data points.
+-------- Ex 2 - Classification : Logistic Regression ------------------------------------------------|
+-----------------------------------------------------------------------------------------------------|
+In this exercise, the logistic regression is implemented and applyed to two different datasets.      |
+the advanced built-in function fminunc is used to minimize the cost function J.                      |
+  * The first dataset is scores of students on two exams for admission in a university.
+    you will build a logistic regression 
+    model to predict whether a student gets admitted or not. You'll predict the probability
+    that a student with score 45 on exam 1 and score 85 on exam 2 will be admitted.
+  * Then, you are given a dataset of two test results on microchips. From these two tests,
+    you would like to determine whether the microchips should be accepted or rejected.
+    The data points are not linearly separable. However, you would still like to use 
+    logistic regression to classify the data points.
 
 Files included in this exercise
        - ex2.m - Octave/MATLAB script that steps you through the exercise
@@ -52,4 +56,237 @@ Files included in this exercise
        - * costFunctionReg.m - Regularized Logistic Regression Cost
 
 
+-------- Ex 3 - Multi-Class Classification (One-Vs_all) And Neural Network --------------------------
+-----------------------------------------------------------------------------------------------------
+In this exercise, you will implement one-vs-all logistic regression and neural networks to recognize 
+hand-written digits (from 0 to 9). Automated handwritten digit recognition is widely used today - 
+from recognizing zip codes (postal codes) on mail envelopes to recognizing amounts written on bank 
+checks. This exercise will show you how the methods you’ve learned can be used for this classification
+task. You are given a data set in ex3data1.mat that contains 5000 training examples.
+
+* In the first part of the exercise, you will extend your previous implemention of logistic regression
+and apply it to one-vs-all classification. 
+The provided script, ex3.m, will help you step through this part.
+
+* In second part, you will implement a neural network to recognize handwritten digits using the same 
+training set as before. The neural network will be able to represent complex models that form 
+non-linear hypotheses. For this part, you will be using parameters from a neural network that we have
+already trained. Your goal is to implement the feedforward propagation algorithm to use our weights for
+prediction. In next week’s exercise, you will write the backpropagation algorithm for learning the
+neural network parameters. The provided script, ex3_nn.m, will help you step through this part.
+
+Files included in this exercise
+        ex3.m - Octave/MATLAB script that steps you through part 1
+        ex3_nn.m - Octave/MATLAB script that steps you through part 2
+        ex3data1.mat - Training set of hand-written digits
+        ex3weights.mat - Initial weights for the neural network exercise
+        displayData.m - Function to help visualize the dataset
+        fmincg.m - Function minimization routine (similar to fminunc)
+        sigmoid.m - Sigmoid function
+        [?] lrCostFunction.m - Logistic regression cost function
+        [?] oneVsAll.m - Train a one-vs-all multi-class classifier
+        [?] predictOneVsAll.m - Predict using a one-vs-all multi-class classifier
+        [?] predict.m - Neural network prediction function
+
+        ? indicates files you will need to complete
+ 
+-------- Ex 4 - Neural Networks Learning ------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+In this exercise, you will implement the backpropagation algorithm for neural networks 
+and apply it to the task of hand-written digit recognition.
+
+Files included in this exercise
+        ex4.m - Octave/MATLAB script that steps you through the exercise
+        ex4data1.mat - Training set of hand-written digits
+        ex4weights.mat - Neural network parameters for exercise 4
+        displayData.m - Function to help visualize the dataset
+        fmincg.m - Function minimization routine (similar to fminunc)
+        sigmoid.m - Sigmoid function
+        computeNumericalGradient.m - Numerically compute gradients
+        checkNNGradients.m - Function to help check your gradients
+        debugInitializeWeights.m - Function for initializing weights
+        predict.m - Neural network prediction function
+        [?] sigmoidGradient.m - Compute the gradient of the sigmoid function
+        [?] randInitializeWeights.m - Randomly initialize weights
+        [?] nnCostFunction.m - Neural network cost function
+        
+        ? indicates files you will need to complete
+
+Throughout the exercise, you will be using the script ex4.m. This script
+set up the dataset for the problems and make calls to functions that you will
+write. You do not need to modify the script. You are only required to modify
+functions in other files, by following the instructions in this assignment.
+
+-------- Ex 5 - Regularized Linear Regression and Bias v.s. Variance---------------------------------
+-----------------------------------------------------------------------------------------------------
+
+In this exercise, you will implement regularized linear regression and use it to
+study models with different bias-variance properties.
+
+* In the first half of the exercise, you will implement regularized linear regression
+to predict the amount of water flowing out of a dam using the change of water level 
+in a reservoir. 
+* In the next half, you will go through some diagnostics of debugging learning algorithms
+and examine the effects of bias v.s. variance.
+
+Files included in this exercise
+        ex5.m - Octave/MATLAB script that steps you through the exercise
+        ex5data1.mat - Dataset
+        submit.m - Submission script that sends your solutions to our servers
+        featureNormalize.m - Feature normalization function
+        fmincg.m - Function minimization routine (similar to fminunc)
+        plotFit.m - Plot a polynomial fit
+        trainLinearReg.m - Trains linear regression using your cost function
+        [?] linearRegCostFunction.m - Regularized linear regression cost function
+        [?] learningCurve.m - Generates a learning curve
+        [?] polyFeatures.m - Maps data into polynomial feature space
+        [?] validationCurve.m - Generates a cross validation curve
+        
+        ? indicates files you will need to complete
+
+Throughout the exercise, you will be using the script ex5.m. This script
+set up the dataset for the problems and make calls to functions that you will
+write. You are only required to modify functions in other files, by following
+the instructions in this assignment.
+
+-------- Ex 6 - Support Vector Machines -------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+In this exercise, you will be using support vector machines (SVMs) to build
+a spam classifier.
+
+* In the first half of this exercise, you will be using support vector machines
+(SVMs) with various example 2D datasets. Experimenting with these datasets
+will help you gain an intuition of how SVMs work and how to use a Gaussian
+kernel with SVMs. 
+* In the next half of the exercise, you will be using support
+vector machines to build a spam classifier: Many email services today provide spam
+filters that are able to classify emails into spam and non-spam email with high accuracy.
+In this part of the exercise, you will use SVMs to build your own spam filter.
+
+
+Files included in this exercise
+- Part 1:
+        ex6.m - Octave/MATLAB script for the first half of the exercise
+        ex6data1.mat - Example Dataset 1
+        ex6data2.mat - Example Dataset 2
+        ex6data3.mat - Example Dataset 3
+        svmTrain.m - SVM training function
+        svmPredict.m - SVM prediction function
+        plotData.m - Plot 2D data
+        visualizeBoundaryLinear.m - Plot linear boundary
+        visualizeBoundary.m - Plot non-linear boundary
+        linearKernel.m - Linear kernel for SVM
+        [?] gaussianKernel.m - Gaussian kernel for SVM
+        [?] dataset3Params.m - Parameters to use for Dataset 3
+- Part 2:
+        ex6_spam.m - Octave/MATLAB script for the second half of the exercise
+        spamTrain.mat - Spam training set
+        spamTest.mat - Spam test set
+        emailSample1.txt - Sample email 1
+        emailSample2.txt - Sample email 2
+        spamSample1.txt - Sample spam 1
+        spamSample2.txt - Sample spam 2
+        vocab.txt - Vocabulary list
+        getVocabList.m - Load vocabulary list
+        porterStemmer.m - Stemming function
+        readFile.m - Reads a file into a character string
+        [?] processEmail.m - Email preprocessing
+        [?] emailFeatures.m - Feature extraction from emails
+        ? indicates files you will need to complete
+
+
+-------- Ex 7 - K-means Clustering and Principal Component Analysis ---------------------------------
+-----------------------------------------------------------------------------------------------------
+
+In this exercise, you will implement the K-means clustering algorithm and
+apply it to compress an image. You will first start on an example 2D dataset
+that will help you gain an intuition of how the K-means algorithm works. After
+that, you wil use the K-means algorithm for image compression by reducing
+the number of colors that occur in an image to only those that are most
+common in that image. You will be using ex7.m for this part of the exercise.
+
+In the second part, you will use principal component analysis to find a low-dimensional
+representation of face images (to perform dimensionality reduction) You will first 
+experiment with an example 2D dataset to get intuition on how PCA works, and then use it on a bigger
+dataset of 5000 face image dataset. 
+You will be using ex7_pca.m for this part of the exercise.
+
+Files included in this exercise
+        ex7.m - Octave/MATLAB script for the first exercise on K-means
+        ex7_pca.m - Octave/MATLAB script for the second exercise on PCA
+        ex7data1.mat - Example Dataset for PCA
+        ex7data2.mat - Example Dataset for K-means
+        ex7faces.mat - Faces Dataset
+        bird small.png - Example Image
+        displayData.m - Displays 2D data stored in a matrix
+        drawLine.m - Draws a line over an exsiting figure
+        plotDataPoints.m - Initialization for K-means centroids
+        plotProgresskMeans.m - Plots each step of K-means as it proceeds
+        runkMeans.m - Runs the K-means algorithm
+        [?] pca.m - Perform principal component analysis
+        [?] projectData.m - Projects a data set into a lower dimensional space
+        [?] recoverData.m - Recovers the original data from the projection
+        [?] findClosestCentroids.m - Find closest centroids (used in K-means)
+        [?] computeCentroids.m - Compute centroid means (used in K-means)
+        [?] kMeansInitCentroids.m - Initialization for K-means centroids
+
+        ? indicates files you will need to complete
+
+Throughout the first part of the exercise, you will be using the script
+ex7.m, for the second part you will use ex7 pca.m. These scripts set up the
+dataset for the problems and make calls to functions that you will write.
+You are only required to modify functions in other files, by following the
+instructions in this assignment.
+
+-------- Ex 8 - Anomaly Detection and Recommender Systems -------------------------------------------
+-----------------------------------------------------------------------------------------------------
+In this exercise, you will implement the anomaly detection algorithm and
+apply it to detect failing servers on a network. In the second part, you will
+use collaborative filtering to build a recommender system for movies.
+
+1- First, you will implement an anomaly detection algorithm to detect anomalous 
+behavior in server computers. The features measure the throughput (mb/s) and latency (ms) 
+of response of each server. While your servers were operating, you collected m = 307 
+examples of how they were behaving, and thus have an unlabeled dataset {x(1), ..., x(m)}.
+You suspect that the vast majority of these examples are \normal" (non-anomalous) examples of
+the servers operating normally, but there might also be some examples of servers acting anomalously
+within this dataset. You will use a Gaussian model to detect anomalous examples in your
+dataset. You will first start on a 2D dataset that will allow you to visualize what the algorithm
+is doing. On that dataset you will fit a Gaussian distribution and then find values that have very
+low probability and hence can be considered anomalies. After that, you will apply the anomaly detection
+algorithm to a larger dataset with many dimensions. 
+
+2- In this part of the exercise, you will implement the collaborative filtering
+learning algorithm and apply it to a dataset of movie ratings.2 This dataset
+consists of ratings on a scale of 1 to 5. The dataset has nu = 943 users, and
+nm = 1682 movies. For this part of the exercise, you will be working with
+the script ex8 cofi.m
+
+Files included in this exercise
+ex8.m - Octave/MATLAB script for first part of exercise
+ex8_cofi.m - Octave/MATLAB script for second part of exercise
+ex8data1.mat - First example Dataset for anomaly detection
+ex8data2.mat - Second example Dataset for anomaly detection
+ex8 movies.mat - Movie Review Dataset
+ex8 movieParams.mat - Parameters provided for debugging
+multivariateGaussian.m - Computes the probability density function
+for a Gaussian distribution
+visualizeFit.m - 2D plot of a Gaussian distribution and a dataset
+checkCostFunction.m - Gradient checking for collaborative filtering
+computeNumericalGradient.m - Numerically compute gradients
+fmincg.m - Function minimization routine (similar to fminunc)
+loadMovieList.m - Loads the list of movies into a cell-array
+movie ids.txt - List of movies
+normalizeRatings.m - Mean normalization for collaborative filtering
+submit.m - Submission script that sends your solutions to our servers
+[?] estimateGaussian.m - Estimate the parameters of a Gaussian distribution with a diagonal covariance matrix
+[?] selectThreshold.m - Find a threshold for anomaly detection
+[?] cofiCostFunc.m - Implement the cost function for collaborative filtering
+
+? indicates files you will need to complete
+
+Throughout the first part of the exercise (anomaly detection) you will be
+using the script ex8.m. For the second part of collaborative filtering, you
+will use ex8 cofi.m. These scripts set up the dataset for the problems and
+make calls to functions that you will write. 
 
